@@ -39,12 +39,12 @@ namespace :db do
 
     desc "create MySQL database"
     task :create do
-      sh 'mysql -u root -e "create database marginalia_test;"'
+      sh 'mysql -h 127.0.0.1 -u root -e "create database marginalia_test;"'
     end
 
     desc "drop MySQL database"
     task :drop do
-      sh 'mysql -u root -e "drop database if exists marginalia_test;"'
+      sh 'mysql -h 127.0.0.1 -u root -e "drop database if exists marginalia_test;"'
     end
   end
 
